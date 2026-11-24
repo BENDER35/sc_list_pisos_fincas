@@ -1,0 +1,110 @@
+{
+  "nota_global": "Catálogo orientativo. Las plantillas de búsqueda pueden cambiar en cada portal; edítalas según tus necesidades. No eludas bloqueos ni condiciones de uso.",
+  "webs": [
+    {
+      "id": "idealista",
+      "nombre": "Idealista",
+      "url": "https://www.idealista.com",
+      "tipo": "portal",
+      "cobertura": "España",
+      "robots": "https://www.idealista.com/robots.txt",
+      "plantillas": {
+        "inicio": "https://www.idealista.com/",
+        "provincia": "https://www.idealista.com/inmuebles/venta/{provincia_slug}/",
+        "localidad": "https://www.idealista.com/inmuebles/venta/{provincia_slug}/{localidad_slug}/",
+        "calle": "https://www.idealista.com/buscar/venta/{provincia_slug}/{localidad_slug}/?txt={calle}"
+      },
+      "nota": "Consultar condiciones de uso antes de automatizar."
+    },
+    {
+      "id": "fotocasa",
+      "nombre": "Fotocasa",
+      "url": "https://www.fotocasa.es",
+      "tipo": "portal",
+      "cobertura": "España",
+      "robots": "https://www.fotocasa.es/robots.txt",
+      "plantillas": {
+        "inicio": "https://www.fotocasa.es/",
+        "provincia": "https://www.fotocasa.es/es/comprar/viviendas/{provincia_slug}/",
+        "localidad": "https://www.fotocasa.es/es/comprar/viviendas/{provincia_slug}/{localidad_slug}/",
+        "calle": "https://www.fotocasa.es/es/comprar/viviendas/{provincia_slug}/{localidad_slug}/?text={calle}"
+      },
+      "nota": "Las URL pueden variar; verifícalas en el navegador."
+    },
+    {
+      "id": "pisos-com",
+      "nombre": "pisos.com",
+      "url": "https://www.pisos.com",
+      "tipo": "portal",
+      "cobertura": "España",
+      "robots": "https://www.pisos.com/robots.txt",
+      "plantillas": {
+        "inicio": "https://www.pisos.com/",
+        "provincia": "https://www.pisos.com/venta/{provincia_slug}/",
+        "localidad": "https://www.pisos.com/venta/{provincia_slug}/{localidad_slug}/",
+        "calle": "https://www.pisos.com/venta/{provincia_slug}/{localidad_slug}/?text={calle}"
+      },
+      "nota": "Plantilla configurable en data/webs.json."
+    },
+    {
+      "id": "enalquiler",
+      "nombre": "enalquiler.com",
+      "url": "https://www.enalquiler.com",
+      "tipo": "portal",
+      "cobertura": "España",
+      "robots": "https://www.enalquiler.com/robots.txt",
+      "plantillas": {
+        "inicio": "https://www.enalquiler.com/",
+        "provincia": "https://www.enalquiler.com/alquiler/viviendas/{provincia_slug}/",
+        "localidad": "https://www.enalquiler.com/alquiler/viviendas/{provincia_slug}/{localidad_slug}/",
+        "calle": "https://www.enalquiler.com/alquiler/viviendas/{provincia_slug}/{localidad_slug}/?text={calle}"
+      },
+      "nota": "Especializado en alquiler."
+    },
+    {
+      "id": "milanuncios",
+      "nombre": "Milanuncios",
+      "url": "https://www.milanuncios.com",
+      "tipo": "portal",
+      "cobertura": "España",
+      "robots": "https://www.milanuncios.com/robots.txt",
+      "plantillas": {
+        "inicio": "https://www.milanuncios.com/",
+        "provincia": "https://www.milanuncios.com/pisos-en-venta/?provincia={provincia}",
+        "localidad": "https://www.milanuncios.com/pisos-en-venta/?demanda={localidad}",
+        "calle": "https://www.milanuncios.com/pisos-en-venta/?demanda={localidad}+{calle}"
+      },
+      "nota": "Anuncios de particulares y profesionales."
+    },
+    {
+      "id": "finques-catalanes",
+      "nombre": "Finques Catalanes (ejemplo)",
+      "url": "https://www.example.com/finques",
+      "tipo": "inmobiliaria",
+      "cobertura": "Cataluña",
+      "robots": "https://www.example.com/robots.txt",
+      "plantillas": {
+        "inicio": "https://www.example.com/finques",
+        "provincia": "https://www.example.com/finques?provincia={provincia}",
+        "localidad": "https://www.example.com/finques?localitat={localidad}",
+        "calle": "https://www.example.com/finques?localitat={localidad}&carrer={calle}"
+      },
+      "nota": "Sitio ficticio de ejemplo para probar el generador de URLs."
+    },
+    {
+      "id": "demo-local",
+      "nombre": "Demo local (datos de prueba)",
+      "url": "https://ejemplo.test/pisos",
+      "tipo": "demo",
+      "cobertura": "Datos de ejemplo",
+      "robots": "",
+      "plantillas": {
+        "inicio": "https://ejemplo.test/pisos",
+        "provincia": "https://ejemplo.test/pisos?provincia={provincia_slug}",
+        "localidad": "https://ejemplo.test/pisos?localidad={localidad_slug}",
+        "calle": "https://ejemplo.test/pisos?localidad={localidad_slug}&calle={calle_slug}"
+      },
+      "nota": "Se usa en las pruebas automáticas: no hace peticiones reales."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+Package: sc-list-pisos-fincas
+Version: @VERSION@
+Section: utils
+Priority: optional
+Architecture: all
+Depends: python3 (>= 3.8)
+Maintainer: BENDER35 <grandrodri3@gmail.com>
+Description: Local finder for flats and properties by province, town and street
+ Lists flats and properties from a local JSON catalogue filtered by
+ province, town or street, and builds search URLs for real-estate websites.
+ Includes a didactic guide in Spanish and English and no external dependencies.

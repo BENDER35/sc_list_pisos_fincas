@@ -1,0 +1,5 @@
+#!/bin/sh
+# Lanzador del paquete Debian. SC_PISOS_HOME permite usar otro directorio de datos.
+BASE="${SC_PISOS_HOME:-/usr/share/sc-list-pisos-fincas}"
+PYTHON="${PYTHON:-/usr/bin/python3}"
+exec "$PYTHON" -c 'import sys; sys.path.insert(0, sys.argv[1]); from pisos_fincas.cli import main; sys.exit(main(sys.argv[2:]))' "$BASE" "$@"
