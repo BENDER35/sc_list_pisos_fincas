@@ -12,4 +12,5 @@ All notable changes to this project are documented here.
 - Automated tests and verification script.
 - zip and deb release artifacts.
 - Bidirectional GitHub ⇄ GitLab mirror via GitHub Actions and GitLab CI.
+- Mirror scripts also compare and replicate tags (fixed after release verification).
 - Didactic guide in Spanish and English.
