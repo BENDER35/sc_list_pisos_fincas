@@ -107,6 +107,11 @@ class TestWebs(unittest.TestCase):
         self.assertIn("alcala-de-henares", url)
         self.assertIn("calle-mayor", url)
 
+    def test_url_sin_barras_duplicadas(self):
+        portal = next(w for w in web.cargar_webs(WEBS) if w["id"] == "idealista")
+        url = core.construir_url(portal, localidad="Valencia", calle="Colon")
+        self.assertNotIn("//", url.replace("https://", "").replace("http://", ""))
+
     def test_url_encodeda_cuando_no_hay_slug(self):
         portal = next(w for w in web.cargar_webs(WEBS) if w["id"] == "milanuncios")
         url = core.construir_url(portal, localidad="Alcalá de Henares", calle="Mayor")

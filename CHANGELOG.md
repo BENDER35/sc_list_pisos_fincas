@@ -13,4 +13,5 @@ All notable changes to this project are documented here.
 - zip and deb release artifacts.
 - Bidirectional GitHub ⇄ GitLab mirror via GitHub Actions and GitLab CI.
 - Mirror scripts also compare and replicate tags (fixed after release verification).
+- Generated search URLs no longer contain duplicate slashes when province is omitted.
 - Didactic guide in Spanish and English.

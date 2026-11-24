@@ -231,9 +231,11 @@ def construir_url(
         "version": __version__,
     }
     try:
-        return plantilla.format(**valores)
+        url = plantilla.format(**valores)
     except (KeyError, IndexError):
         return str(web.get("url", ""))
+    # Los filtros opcionales pueden dejar barras duplicadas en la ruta.
+    return re.sub(r"(?<!:)//+", "/", url)
 
 
 def tabla(listados: Iterable[Dict[str, Any]]) -> str:
